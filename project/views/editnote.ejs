@@ -1,0 +1,18 @@
+<html>
+<head><title>Edit page</title>
+</head>
+
+<body>
+  <div class="note">
+    <h1>Edit Note</h1><br>
+    <form method="post" action="/editnote">
+    <input type="hidden" name="_id" value="<%= note._id %>">
+    <textarea rows="1" cols="70" name="title"> <%= note.title %> </textarea><br><br>
+    <textarea rows="10" cols="70" name="note"> <%= note.note %> </textarea><br><br>
+    <button type="submit">Edit </button>
+  </form>
+  </div>
+
+
+</body>
+</html>

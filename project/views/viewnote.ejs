@@ -1,0 +1,33 @@
+<html>
+<head><title>Login page</title>
+  <style type="text/css">
+    #add{
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>View Note</h1><br>
+  <% notes.forEach(function(note, i){ %>
+  <div id='main' class="note">
+    <button id="add" type="submit">Add </button><br>
+
+    <textarea id="view" rows="1" cols="70" name="title">
+    <%= note.title %>
+    </textarea><br><br>
+
+    <textarea id="view" rows="10" cols="70" name="note">
+     <%= note.note %>
+     </textarea><br><br>
+     <button id="edit" type="submit" onclick="window.location.href='/editnote/<%= note._id %>'">Edit </button>
+      <button id="delete" type="submit" onclick="window.location.href='/deletenote/<%= note._id%>'">Delete </button><br><br><br>
+  </div>
+
+<% }) %>
+
+</body>
+</html>
